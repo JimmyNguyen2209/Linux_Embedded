@@ -1,0 +1,3 @@
+
+void helloHien();
+void helloLinux();

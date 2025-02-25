@@ -1,0 +1,1 @@
+//Dữ liệu được ghi vào sẽ xuất hiện ở cuối file vì khi sử dụng cờ O_APPEND thì con trỏ được cố định nằm ở cuối cùng dù cho có sử dụng hàm lseek() để thay đổi vị trí con trỏ
