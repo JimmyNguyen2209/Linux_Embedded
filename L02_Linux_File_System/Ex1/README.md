@@ -1,1 +1,1 @@
-//Dữ liệu được ghi vào sẽ xuất hiện ở cuối file vì khi sử dụng cờ O_APPEND thì con trỏ được cố định nằm ở cuối cùng dù cho có sử dụng hàm lseek() để thay đổi vị trí con trỏ
+// The written data will appear at the end of the file because when using the O_APPEND flag, the file pointer is fixed at the end, even if the lseek() function is used to change the pointer position.

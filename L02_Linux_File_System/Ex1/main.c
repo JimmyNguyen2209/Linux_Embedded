@@ -7,17 +7,22 @@ void main()
 {
     int fd;
     int numRead, numWrite;
-    char text[10] = "Chàoo";
+    char text[10] = "Hiii ";
+    char name[10] = "Hien";
 
-    fd = open("text.txt", O_RDWR | O_APPEND);
+    fd = open("text.txt", O_RDWR | O_APPEND | O_CREAT, 0644);
     if(fd == -1)
     {
         printf("Failed open file!");
     }
-    
-    lseek(fd, 1, SEEK_SET);
+
+
 
     numWrite = write(fd, text, strlen(text));
+    
+    lseek(fd, 0, SEEK_SET);
+
+    numWrite = write(fd, name, strlen(name));
 
     close(fd);
 
