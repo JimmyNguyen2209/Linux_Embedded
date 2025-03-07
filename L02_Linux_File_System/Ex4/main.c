@@ -27,17 +27,17 @@ int main()
         return 1;
     }
 
-    printf("Thông tin file: %s\n", file_name);
-    printf("Kích thước: %ld bytes\n", fileStat.st_size);
-    printf("Thời gian sửa đổi cuối: %s", ctime(&fileStat.st_mtime));
+    printf("File infomation: %s\n", file_name);
+    printf("Memory: %ld bytes\n", fileStat.st_size);
+    printf("Last edited time: %s", ctime(&fileStat.st_mtime));
     if (S_ISREG(fileStat.st_mode)) {
-        printf("%s là file thông thường.\n", file_name);
+        printf("%s is Normal file.\n", file_name);
     } else if (S_ISDIR(fileStat.st_mode)) {
-        printf("%s là thư mục.\n", file_name);
+        printf("%s is dictionary.\n", file_name);
     } else if (S_ISLNK(fileStat.st_mode)) {
-        printf("%s là file symbolic link.\n", file_name);
+        printf("%s is symbolic link file.\n", file_name);
     } else {
-        printf("%s là loại file khác.\n", file_name);
+        printf("%s is another file type.\n", file_name);
     }
 
     return 0;
